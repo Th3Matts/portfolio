@@ -63,6 +63,22 @@ main section{
   width: 54rem;
 }
 
+main section .button-wrapper{
+  display: flex;
+  justify-content: end;
+  gap: .5rem;
+}
+
+main section button{
+  color: var(--color-dark-blue);
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: .9rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
 main section p{
   color: var(--color-dark-blue);
   font-family: "Poppins", sans-serif;
