@@ -14,7 +14,7 @@
     />
   </head>
   <body>
-    <div class="container portuguese">
+    <div class="container">
       <header>
         <img src="./assets/images/leaf_white.svg" alt="" />
         <nav>
@@ -22,22 +22,33 @@
             <button id="lang-pt">pt</button> | <button id="lang-en">en</button>
           </div>
           <ul>
-            <li><a href="">About</a></li>
-            <li><a href="">Projects</a></li>
-            <li><a href="">Contact</a></li>
+            <li><a href="#" data-en="About" data-pt="Sobre mim">About</a></li>
+            <li><a href="#projects" data-en="Projects" data-pt="Projetos">Projects</a></li>
+            <li><a href="#contact" data-en="Contact" data-pt="Fale comigo">Contact</a></li>
           </ul>
         </nav>
       </header>
       <main>
-        <section>
-          <p>
-            I'm Matheus Silva and a <span>web developer in training</span> with
-            a background in tech-adjacent client work.
-          </p>
-          <p>
-            Currently seeking junior/entry-level
-            <span>web developer opportunities</span> , open to remote work.
-          </p>
+        <section id="about">
+          <div id="text-wrapper">
+            <p data-en="I'm Matheus Silva, a <span>web developer in training</span> with a background in tech-adjacent client work."
+             data-pt="Sou Matheus Silva, um <span>desenvolvedor web em formação</span>, com experiência prévia em trabalhos com clientes na área de tecnologia.">
+            I'm Matheus Silva, a <span>web developer in training</span> with a background in tech-adjacent client work.
+            </p>
+            <p data-en="Currently seeking <span>junior/entry-level web developer opportunities</span>, open to remote work."
+               data-pt="Atualmente em busca de <span>oportunidades de desenvolvedor web júnior/nível inicial</span>, aberto(a) a trabalho remoto.">
+               Currently seeking <span>junior/entry-level web developer opportunities</span>, open to remote work.
+            </p>
+          </div>
+
+        </section>
+
+        <section id="projects">
+          abroba
+        </section>
+
+        <section id="contact">
+          callme
         </section>
       </main>
 

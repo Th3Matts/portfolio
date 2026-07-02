@@ -1,5 +1,6 @@
 :root{
   --color-white: #F0F0F0;
+  --color-black: #2B2B2BF6;
   --color-dark-blue: #1e1e44;
   --bg-color: #87879C;
 }
@@ -24,14 +25,17 @@
 }
 
 header{
+  background: inherit;
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  width: 80dvw;
+  width: 100dvw;
 
-  margin: auto;
-  padding: 1rem;
+  padding: 1rem 1.5rem;
+  position: fixed;
+  top: 0;
+  z-index: 10;
 }
 
 header img{
@@ -43,35 +47,6 @@ header nav{
   display: flex;
   flex-direction: column;
   align-items: end;
-}
-
-header ul{
-  display: flex;
-  gap: 1rem;
-}
-
-header ul li{
-  list-style: none;
-}
-
-li a{
-  color: var(--color-white);
-  text-decoration: none;
-}
-
-main{
-  width: 100dvw;
-  display: flex;
-  justify-content: center;
-}
-
-main section{
-  width: 54rem;
-}
-
-main section .button-wrapper{
-  display: flex;
-  justify-content: end;
   gap: .5rem;
 }
 
@@ -85,10 +60,47 @@ header .lang-wrapper button{
   cursor: pointer;
 }
 
+header ul{
+  display: flex;
+  gap: 3rem;
+}
+
+header ul li{
+  list-style: none;
+}
+
+li a{
+  color: var(--color-white);
+  text-decoration: none;
+}
+
+main{
+  width: 100dvw;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main section{
+  width: 100dvw;
+  min-height: 100vh;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main #text-wrapper{
+  width: 50dvw;
+}
+
 main section p{
   color: var(--color-dark-blue);
   font-family: "Poppins", sans-serif;
-  font-size: 1.6rem;
+  font-size: 2rem;
   font-weight: 600;
   font-style: normal;
 
@@ -99,11 +111,17 @@ main section span{
   color: var(--color-white);
 }
 
-footer{
-  margin: 1rem;
-  text-align: center;
+main #projects{
+  color: var(--color-black);
+  background: var(--color-white);
 }
 
-footer img{
-  transform: scale(1.1);
+main #contact{
+  background-color: var(--color-black);
+}
+
+footer{
+  background: var(--color-black);
+  padding: 1rem;
+  text-align: center;
 }
