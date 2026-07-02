@@ -15,49 +15,53 @@ html {
   scroll-behavior: smooth;
 }
 
+/* ===== BASE (MOBILE) STYLES ===== */
+
 .container {
   color: var(--color-white);
   background: var(--bg-color);
-  min-width: 80dvw;
+  min-width: 100dvw;
   min-height: 100vh;
 
   display: grid;
   justify-content: center;
   align-items: center;
-  grid-template-rows: 1fr min-content;
+  grid-template-rows: min-content 1fr min-content;
 }
 
 header{
   background: inherit;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
+  gap: .75rem;
 
   width: 100dvw;
 
-  padding: 1rem 1.5rem;
+  padding: 1rem;
   position: fixed;
   top: 0;
   z-index: 10;
 }
 
 header img{
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
 }
 
 header nav{
   display: flex;
   flex-direction: column;
-  align-items: end;
+  align-items: center;
   gap: .5rem;
+  width: 100%;
 }
 
 header .lang-wrapper button{
   color: var(--color-dark-blue);
   font-family: "Poppins", sans-serif;
   font-weight: 500;
-  font-size: .9rem;
+  font-size: .85rem;
   background: none;
   border: none;
   cursor: pointer;
@@ -65,7 +69,7 @@ header .lang-wrapper button{
 
 header ul{
   display: flex;
-  gap: 3rem;
+  gap: 1.25rem;
 }
 
 header ul li{
@@ -75,6 +79,7 @@ header ul li{
 li a{
   color: var(--color-white);
   text-decoration: none;
+  font-size: .9rem;
 }
 
 main{
@@ -84,32 +89,33 @@ main{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  padding-top: 90px;
 }
 
 main section{
   width: 100dvw;
   min-height: 100dvh;
-  
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 1rem;
+
 }
 
-main #text-wrapper{
-  width: 50dvw;
+main #about .text-wrapper{
+  margin-top: 2rem;
+  width: 85dvw;
 }
 
 main section p{
   color: var(--color-dark-blue);
   font-family: "Poppins", sans-serif;
-  font-size: 2rem;
+  font-size: 1.4rem;
   font-weight: 600;
   font-style: normal;
 
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
 }
 
 main section span{
@@ -131,14 +137,47 @@ footer{
   text-align: center;
 }
 
+@media (min-width: 768px) {
+  header{
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+  }
 
-@media (max-width: 768px) {
-  main #text-wrapper{
-    width: 80dvw;
-    margin: 30px 0;
+  header img{
+    width: 50px;
+    height: 50px;
+  }
+
+  header nav{
+    flex-direction: column;
+    align-items: end;
+    width: auto;
+  }
+
+  header ul{
+    gap: 2rem;
+  }
+
+  main #about .text-wrapper{
+    width: 50dvw;
   }
 
   main section p{
-    font-size: 1rem;
+    font-size: 1.8rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  header ul{
+    gap: 3rem;
+  }
+
+  main .text-wrapper{
+    width: 50dvw;
+  }
+
+  main section p{
+    font-size: 2rem;
   }
 }
