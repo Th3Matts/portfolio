@@ -1,8 +1,14 @@
 :root{
   --color-white: #F0F0F0;
-  --color-black: #2B2B2BF6;
-  --color-dark-blue: #1e1e44;
+  --color-light-grey: #E5E7EB;
   --bg-color: #87879C;
+  --color-dark-grey: #54575A;
+  --color-black: #2B2B2BF6;
+  --color-light-blue: #A9A9CE;
+  --color-dark-blue: #1E1E44;
+  --color-yellow: #f5e026;
+  --color-orange: #F5A226;
+  --color-blue: #2680f5;
 }
 
 *{
@@ -125,6 +131,69 @@ main section span{
 main #projects{
   color: var(--color-black);
   background: var(--color-white);
+  
+  justify-content: start;
+  gap: 3rem;
+}
+
+main #projects figure{
+  max-width: 290px;
+
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  
+  margin: 0 auto;
+
+  border-radius: 8px;
+  overflow: hidden;
+
+  z-index: 0;
+}
+
+main #projects .card img{
+  width:100%;
+  height: 210px;
+  
+  display: block;
+  
+  object-fit: cover;
+  aspect-ratio: 16/9;
+}
+
+main #projects figcaption{
+  background: var(--color-light-grey);
+  
+  padding: 8px;
+
+  z-index: 1;
+}
+
+main #projects figcaption h3{
+  color: var(--color-black);
+  font-size: 1rem;
+}
+
+main #projects .tag-wrapper{
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+
+  margin: 0.5rem 0;
+}
+
+main #projects .tag{
+  color: var(--color-white);
+  font-size: 0.8rem;
+  background: var(--color-light-blue);
+  padding: 0.3rem;
+
+  border-radius: 3px;
+}
+
+main #projects figcaption p{
+  color: var(--color-dark-grey);
+  font-size: 0.9rem;
 }
 
 main #contact{
