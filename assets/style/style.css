@@ -6,9 +6,6 @@
   --color-black: #2B2B2BF6;
   --color-light-blue: #A9A9CE;
   --color-dark-blue: #1E1E44;
-  --color-yellow: #f5e026;
-  --color-orange: #F5A226;
-  --color-blue: #2680f5;
 }
 
 *{
@@ -16,12 +13,13 @@
   margin: 0;
   padding: 0;
 }
-
+* a{
+  color: var(--color-white);
+  text-decoration: none;
+}
 html {
   scroll-behavior: smooth;
 }
-
-/* ===== BASE (MOBILE) STYLES ===== */
 
 .container {
   color: var(--color-white);
@@ -83,8 +81,6 @@ header ul li{
 }
 
 li a{
-  color: var(--color-white);
-  text-decoration: none;
   font-size: .9rem;
 }
 
@@ -105,8 +101,8 @@ main section{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  
   padding: 1rem;
-
 }
 
 main #about .text-wrapper{
@@ -131,9 +127,17 @@ main section span{
 main #projects{
   color: var(--color-black);
   background: var(--color-white);
-  
-  justify-content: start;
-  gap: 3rem;
+
+  justify-content: center;
+  scroll-margin-top: 10rem;
+}
+
+main #projects .card-wrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  margin-top: 2rem;
 }
 
 main #projects figure{
@@ -163,7 +167,13 @@ main #projects .card img{
 
 main #projects figcaption{
   background: var(--color-light-grey);
+
+  height: 16.5rem;
   
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
   padding: 8px;
 
   z-index: 1;
@@ -194,6 +204,36 @@ main #projects .tag{
 main #projects figcaption p{
   color: var(--color-dark-grey);
   font-size: 0.9rem;
+  font-weight: 400;
+}
+
+main #projects figcaption .button-wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+}
+
+main #projects figcaption button{
+  color: var(--color-white);
+  background: var(--color-dark-blue);
+
+  padding: .4rem;
+
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+
+  cursor: pointer;
+
+  border: none;
+  border-radius: 3px;
+}
+
+main figcaption button img{
+  filter: invert(1) brightness(2);
+  width: 17px;
+  height: 17px;
 }
 
 main #contact{
@@ -228,25 +268,50 @@ footer{
     gap: 2rem;
   }
 
-  main #about .text-wrapper{
+  main #about .text-wrapper,
+  main #projects .card-wrapper{
     width: 50dvw;
+  }
+  
+  main section #projects{
+    scroll-margin-top: 5rem;
   }
 
   main section p{
     font-size: 1.8rem;
+  }
+
+  main #projects .card-wrapper{
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;;
+    gap: 3rem;
   }
 }
 
 @media (min-width: 1024px) {
   header ul{
     gap: 3rem;
+
   }
 
-  main .text-wrapper{
+  main .text-wrapper,
+  main #projects .card-wrapper{
     width: 50dvw;
   }
 
   main section p{
     font-size: 2rem;
+  }
+
+  main #projects{
+
+    scroll-margin-top: 5.7rem;
+  }
+
+  main #projects .card-wrapper{
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
   }
 }
