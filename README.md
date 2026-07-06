@@ -72,8 +72,3 @@ Then visit `http://localhost:8000`.
 - **Email**: matrodriguessilva@gmail.com
 - **LinkedIn**: [linkedin.com/in/matrodriguessilva](https://linkedin.com/in/matrodriguessilva)
 - **GitHub**: [github.com/Th3Matts](https://github.com/Th3Matts)
-
-## Possible Next Steps
-
-- Add alt text to the "About" profile image (currently empty).
-- Consider extracting inline `data-en`/`data-pt` translation strings into a JSON file as the number of translated elements grows.
