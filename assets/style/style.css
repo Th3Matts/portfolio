@@ -8,15 +8,25 @@
   --color-dark-blue: #1E1E44;
 }
 
+@font-face{
+  font-family: JetBrains Mono Nerd;
+  src: url(../fonts/JetBrainsMonoNerdFontMono-Regular.ttf);
+}
+
 *{
+  font-family: JetBrains Mono Nerd;
+
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
+
 * a{
   color: var(--color-white);
   text-decoration: none;
 }
+
 html {
   scroll-behavior: smooth;
 }
@@ -103,6 +113,14 @@ main section{
   align-items: center;
   
   padding: 1rem;
+}
+
+main #about img{
+  width: 128px;
+  height: 128px;
+  
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 main #about .text-wrapper{
@@ -240,6 +258,46 @@ main #contact{
   background-color: var(--color-black);
 }
 
+main #contact .contact-card {
+  background: var(--color-white);
+  background-image: url(../images/leaf_white.svg);
+  background-position: center;
+  background-repeat: repeat-x;
+  
+  color: var(--color-black);
+  border-radius: 12px;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 1.25rem;
+  width: 90%;
+  text-align: center;
+  position: relative;
+
+  z-index: 3;
+}
+
+main #contact .contact-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 1rem;
+}
+
+main #contact .contact-links a {
+  font-size: .8rem;
+
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--color-black);
+}
+
+main #contact .contact-links img{
+  max-width: 1.8rem;
+}
+
 footer{
   background: var(--color-black);
   padding: 1rem;
@@ -292,7 +350,13 @@ footer{
 @media (min-width: 1024px) {
   header ul{
     gap: 3rem;
+  }
 
+  main #about img{
+    width: 256px;
+    height: 256px;
+
+    margin-top: 3rem;
   }
 
   main .text-wrapper,
@@ -313,5 +377,10 @@ footer{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
+  }
+
+  main #contact .contact-card{
+    width: 50rem;
+    height: 19rem;
   }
 }
