@@ -118,6 +118,8 @@ main section{
 main #about img{
   width: 128px;
   height: 128px;
+
+  margin-top: 3rem;
   
   border-radius: 50%;
   object-fit: cover;
