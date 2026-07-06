@@ -1,0 +1,16 @@
+{
+  "nav-about": {"en":"About", "pt": "Sobre mim"},
+  "nav-projects": {"en":"Projects", "pt": "Projetos"},
+  "nav-contact": {"en":"Contact", "pt": "Fale comigo"},
+
+  "about-intro": {
+    "en": "I'm Matheus Silva, a <span>web developer</span> with a background in tech-adjacent client work.",
+    "pt": "Sou Matheus Silva, um <span>desenvolvedor web</span>, com experiência prévia em trabalhos com clientes na área de tecnologia."
+  },
+  "about-seeking": {
+    "en": "Currently seeking <span>junior/entry-level web developer opportunities</span>, open to remote work.",
+    "pt": "Atualmente em busca de <span>oportunidades de desenvolvedor web júnior/nível inicial</span>, aberto(a) a trabalho remoto."
+  },
+
+  "card-h1" : {"en":"Let's connect", "pt":"Vamos conversar"}
+}
