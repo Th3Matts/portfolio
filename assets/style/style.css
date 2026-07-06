@@ -14,7 +14,7 @@
 }
 
 *{
-  font-family: JetBrains Mono Nerd;
+  font-family: "JetBrains Mono Nerd", monospace;
 
   box-sizing: border-box;
   margin: 0;
@@ -331,7 +331,7 @@ footer{
     width: 50dvw;
   }
   
-  main section #projects{
+  main #projects{
     scroll-margin-top: 5rem;
   }
 
